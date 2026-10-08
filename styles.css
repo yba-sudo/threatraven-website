@@ -36,6 +36,9 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+/* where the top-bar links land: the alert a little further down, Pilots at the very end of the page */
+#alert { scroll-margin-top: -56px; }
+#contact { scroll-margin-top: -400px; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans);
   font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased;
   transition: background-color .25s ease, color .25s ease; }
