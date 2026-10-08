@@ -227,6 +227,13 @@ footer a:hover { color: var(--text); }
   .nav { display: none; }
   .tools { margin-left: auto; }
 }
+/* phone footer: mark, year and Privacy on the first line, the email alone on the second */
+@media (max-width: 640px) {
+  footer .wrap { gap: 6px 16px; }
+  footer .sp { display: none; }
+  footer a[href$="privacy.html"] { margin-left: auto; }
+  footer a[href^="mailto:"] { order: 3; flex-basis: 100%; }
+}
 @media (max-width: 520px) {
   .wrap { padding-inline: 18px; }
   .topbar .btn { display: none; }
