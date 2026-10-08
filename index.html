@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ThreatRaven: threat intelligence that is about you</title>
-<meta name="description" content="ThreatRaven connects current threat intelligence to the technology your organization actually runs, and shows the evidence behind every alert.">
+<meta name="description" content="ThreatRaven connects current threat intelligence to your organization's own profile, and every alert carries its chain of evidence.">
 <link rel="canonical" href="https://threatraven.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ThreatRaven">
 <meta property="og:title" content="ThreatRaven: threat intelligence that is about you">
-<meta property="og:description" content="ThreatRaven connects current threat intelligence to the technology your organization actually runs, and shows the evidence behind every alert.">
+<meta property="og:description" content="ThreatRaven connects current threat intelligence to your organization's own profile, and every alert carries its chain of evidence.">
 <meta property="og:url" content="https://threatraven.com/">
 <meta property="og:image" content="https://threatraven.com/og-image.png">
 <meta name="twitter:card" content="summary">
@@ -56,12 +56,11 @@
     <div>
       <p class="eyebrow reveal">Threat intelligence platform</p>
       <h1 class="reveal" style="--d:.06s">Threat intelligence that is <em>about you</em>.</h1>
-      <p class="lede reveal" style="--d:.14s">ThreatRaven reads the threat reports your team has no time to read, maps the technology your organization actually runs, and alerts only where the two meet. Every alert shows its evidence.</p>
+      <p class="lede reveal" style="--d:.14s">ThreatRaven analyzes the threat signals your team has no time to analyze, maps your organization's full profile, and alerts only where the two meet. Every alert carries its chain of evidence.</p>
       <div class="cta reveal" style="--d:.22s">
         <a class="btn" href="mailto:contact@threatraven.com?subject=ThreatRaven%20pilot">Request a pilot</a>
         <a class="btn ghost" href="#how">See how it works</a>
       </div>
-      <p class="stage reveal" style="--d:.3s"><i></i>Product built. Opening design-partner pilots.</p>
     </div>
     <div class="feed reveal" style="--d:.2s" aria-label="Illustration: a stream of threat reports, one of which matches your organization">
       <div class="feedhead"><span>Published today</span><b>1 concerns you</b></div>
@@ -101,7 +100,7 @@
     <div class="split reveal">
       <div><span class="tag">Intelligence feeds</span><h3>Everything, for everyone</h3><p>Thousands of reports and indicators, the same for every subscriber. Deciding what matters to you is left to your team.</p></div>
       <div><span class="tag">Attack surface scanners</span><h3>Exposure without context</h3><p>A list of what you expose to the internet, with no word on who is attacking that kind of system this week.</p></div>
-      <div><span class="tag">ThreatRaven</span><h3>The link between the two</h3><p>Current threats matched to your own technology, with the report, the extracted claim and the asset shown side by side.</p></div>
+      <div><span class="tag">ThreatRaven</span><h3>The link between the two</h3><p>Current threats matched to your organization's profile, with the intelligence, the relationship drawn from it and the asset shown side by side.</p></div>
     </div>
   </div>
 </section>
@@ -111,9 +110,9 @@
     <p class="eyebrow reveal">How it works</p>
     <h2 class="reveal">Three steps, running continuously.</h2>
     <div class="steps">
-      <div class="step reveal"><h3>Gather and read</h3><p>Threat reports are collected from sources weighted for reliability, then read in full. Who is attacking what is extracted and checked against the text it came from.</p><ul><li>research and advisories</li><li>security news</li><li>vulnerability data</li></ul></div>
+      <div class="step reveal"><h3>Gather and analyze</h3><p>Threat intelligence is collected, weighted for reliability, then analyzed. The relationships between threats and what they target are derived and verified.</p><ul><li>research and advisories</li><li>security news</li><li>vulnerability data</li></ul></div>
       <div class="step reveal" style="--d:.1s"><h3>Know what you run</h3><p>A scanner discovers what you expose to the internet. You declare what sits behind it: technology, infrastructure and the third parties you rely on.</p><ul><li>discovered by scan</li><li>declared by you</li><li>third parties</li></ul></div>
-      <div class="step reveal" style="--d:.2s"><h3>Alert where they meet</h3><p>A threat against something you use becomes an alert, internet-facing or not. Exposure and exploitability decide how loud it is.</p><ul><li>one alert per story</li><li>severity with reasons</li><li>full evidence chain</li></ul></div>
+      <div class="step reveal" style="--d:.2s"><h3>Alert where they meet</h3><p>A threat against something you use, or one that matches your profile, becomes an alert, internet-facing or not. Exposure and exploitability decide how loud it is.</p><ul><li>one alert per story</li><li>severity with reasons</li><li>full evidence chain</li></ul></div>
     </div>
   </div>
 </section>
@@ -126,15 +125,14 @@
       <p class="lede reveal">An alert is a claim, and a claim needs evidence. Each one carries the chain that produced it, so an analyst can check it in a minute.</p>
       <ul class="points">
         <li class="reveal"><b>Why you</b>The asset or profile element that matched, and whether the scanner found it or you declared it.</li>
-        <li class="reveal" style="--d:.08s"><b>How we know</b>The source reports, the relationship extracted from them, and the asset it landed on.</li>
-        <li class="reveal" style="--d:.16s"><b>How sure</b>Confidence with its reasons: how many independent sources, how reliable, how certain the asset is.</li>
-        <li class="reveal" style="--d:.24s"><b>Not only vulnerabilities</b>Many real findings involve no CVE at all, such as a group known to compromise a server product you run.</li>
+        <li class="reveal" style="--d:.08s"><b>How we know</b>The source intel, the relationship drawn from it, and the asset it landed on.</li>
+        <li class="reveal" style="--d:.16s"><b>How sure</b>Confidence with its reasons: how many independent signals, how reliable, how certain the asset is.</li>
       </ul>
     </div>
     <div class="alert reveal" style="--d:.1s">
       <div class="meta"><span class="pill sev">High</span><span class="pill st">Open</span><span class="pill ex">Example</span></div>
       <h3>Threat group targets IIS</h3>
-      <p class="sub">raised 2h ago · intel 3d old</p>
+      <p class="sub">raised 2h ago · intel 3h old</p>
       <div class="sect">How we know</div>
       <div class="chain" id="chain">
         <div class="node" style="--d:.25s"><div class="nlabel">Sources · confirmed by 2 independent reports</div><div class="nbody">A group compromising internet-facing IIS servers at scale</div><div class="nsrc">primary research · source tier A</div></div>
@@ -147,20 +145,6 @@
   </div>
 </section>
 
-<section id="quiet">
-  <div class="wrap">
-    <p class="eyebrow reveal">What stays quiet</p>
-    <h2 class="reveal">An alert queue is only useful if it is short.</h2>
-    <p class="lede reveal">Most of what is published should never reach an analyst. These never raise an alert.</p>
-    <div class="quiet">
-      <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><p style="margin:0"><b>Vendor patch advisories</b><span>A fix being released is not a threat against you.</span></p></div>
-      <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><p style="margin:0"><b>Research and proofs of concept</b><span>A researcher demonstrating a technique is not an attack.</span></p></div>
-      <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><p style="margin:0"><b>Old incidents cited as examples</b><span>Last year's breach, mentioned in passing, is not happening now.</span></p></div>
-      <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><p style="margin:0"><b>Unverified tags</b><span>Only what a full report actually says can raise an alert.</span></p></div>
-    </div>
-  </div>
-</section>
-
 <section id="who">
   <div class="wrap cols">
     <div>
@@ -169,7 +153,7 @@
       <ul class="plain">
         <li class="reveal">SOC and security teams that receive more intelligence than they can read.</li>
         <li class="reveal" style="--d:.08s">Organizations that must show they follow threats relevant to them, for example under the EU's DORA regulation.</li>
-        <li class="reveal" style="--d:.16s">Managed security providers serving several clients from one place, each kept strictly separate.</li>
+        <li class="reveal" style="--d:.16s">Managed security providers who must keep up with the threats relevant to many customers at once.</li>
       </ul>
     </div>
     <div class="pilot reveal" id="pilot" style="--d:.1s">
@@ -190,7 +174,8 @@
   <div class="wrap">
     <svg class="mark reveal" aria-hidden="true"><use href="#raven"/></svg>
     <h2 class="reveal">See what it finds on your perimeter.</h2>
-    <p class="lede reveal">A short call, then a pilot if it fits. No commitment beyond that.</p>
+    <p class="lede reveal">In Norse myth, Odin sent two ravens, Huginn and Muninn, across the world each day. They returned at dusk to tell him what they had seen.</p>
+    <p class="lede reveal" style="--d:.08s">ThreatRaven does the same for your organization: it watches everything, and brings back only what concerns you.</p>
     <div class="cta reveal"><a class="btn" href="mailto:contact@threatraven.com?subject=ThreatRaven%20pilot">Request a pilot</a></div>
     <p class="mail reveal">or write to <a href="mailto:contact@threatraven.com">contact@threatraven.com</a></p>
   </div>
@@ -200,7 +185,7 @@
 <footer>
   <div class="wrap">
     <a class="brand" href="./" aria-label="ThreatRaven home">
-      <svg aria-hidden="true" style="width:20px;height:20px"><use href="#raven"/></svg>
+      <svg aria-hidden="true" style="width:16px;height:16px"><use href="#raven"/></svg>
       <span class="wordmark">Threat<span>Raven</span></span>
     </a>
     <span>&copy; <span id="year">2026</span> ThreatRaven</span>
