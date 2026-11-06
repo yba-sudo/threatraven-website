@@ -49,6 +49,17 @@
     }
   }
 
+  // "Watch it": land with the whole video on screen, centred below the top bar
+  document.querySelectorAll('a[href="#watch"]').forEach(function (a) {
+    a.addEventListener('click', function (ev) {
+      var box = document.getElementById('watch'); if (!box) return
+      ev.preventDefault()
+      var top = bar ? bar.offsetHeight : 0, room = window.innerHeight - top, r = box.getBoundingClientRect()
+      var y = window.scrollY + r.top - top - Math.max(12, (room - r.height) / 2)
+      window.scrollTo({ top: y, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
+    })
+  })
+
   // the demo form: sent in place; without JavaScript it posts to the form service directly
   var form = document.getElementById('demo-form'), note = document.getElementById('form-note')
 

@@ -227,6 +227,7 @@ section.alt { background: var(--surface); }
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq summary:hover { color: var(--accent); }
 #alert { scroll-margin-top: -72px; }
+#watch { scroll-margin-top: 24px; }
 .faq details { overflow: hidden; }
 .faq details p { margin: -4px 0 20px; color: var(--text-2); font-size: 15.5px; max-width: 58ch; }
 
