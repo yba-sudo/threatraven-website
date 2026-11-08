@@ -91,6 +91,18 @@
     check(el)
   })
 
+  // LinkedIn conversion "Demo request": only when the request was received, and only if the visitor accepted the tag
+  function convert() { if (window.lintrk) try { window.lintrk('track', { conversion_id: 32619737 }) } catch (e) {} }
+  // when the form service cannot be reached in place (its bot check stopped the request), the form posts normally:
+  // the visitor passes the check on the service's page and comes back here with ?sent=1
+  function postNormally() {
+    var back = document.createElement('input'); back.type = 'hidden'; back.name = 'redirect'
+    back.value = location.origin + location.pathname + '?sent=1#demo'
+    form.appendChild(back)
+    try { sessionStorage.setItem('tr_sent', '1') } catch (e) {}
+    form.submit()
+  }
+
   if (form && window.fetch && window.FormData) form.addEventListener('submit', function (ev) {
     ev.preventDefault()
     if (form.botcheck && form.botcheck.checked) return
@@ -101,13 +113,14 @@
     note.className = 'note'; note.textContent = ''
     var data = {}; new FormData(form).forEach(function (v, k) { data[k] = typeof v === 'string' ? v.trim() : v })
     fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) })
-      .then(function (r) { return r.json().then(function (j) { return r.ok && j.success }) })
+      .then(function (r) { return r.json().then(function (j) { return r.ok && j.success }, function () { return 'blocked' }) },
+        function () { return 'blocked' })
       .then(function (ok) {
+        if (ok === 'blocked') { postNormally(); return }
         if (!ok) throw new Error('not sent')
         form.querySelectorAll('input:not([type=hidden]):not(.trap), textarea').forEach(function (el) { el.value = '' })
         note.className = 'note ok'; note.textContent = 'Sent. Someone will be in touch with you soon.'
-        // LinkedIn conversion "Demo request": only when the request was received, and only if the visitor accepted the tag
-        if (window.lintrk) try { window.lintrk('track', { conversion_id: 32619737 }) } catch (e) {}
+        convert()
         send.textContent = 'Sent'
       })
       .catch(function () {
@@ -167,6 +180,16 @@
       run.oncancel = function () { run = null }
     })
   })
+
+  // back from a normal post: the form service received the request
+  if (form && /[?&]sent=1/.test(location.search)) {
+    var fresh = false; try { fresh = sessionStorage.getItem('tr_sent') === '1'; sessionStorage.removeItem('tr_sent') } catch (e) {}
+    if (fresh) {
+      note.className = 'note ok'; note.textContent = 'Sent. Someone will be in touch with you soon.'
+      convert()
+    }
+    try { history.replaceState(null, '', location.pathname + '#demo') } catch (e) {}
+  }
 
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear()
 })()
