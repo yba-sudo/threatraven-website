@@ -106,6 +106,8 @@
         if (!ok) throw new Error('not sent')
         form.querySelectorAll('input:not([type=hidden]):not(.trap), textarea').forEach(function (el) { el.value = '' })
         note.className = 'note ok'; note.textContent = 'Sent. Someone will be in touch with you soon.'
+        // LinkedIn conversion "Demo request": only when the request was received, and only if the visitor accepted the tag
+        if (window.lintrk) try { window.lintrk('track', { conversion_id: 32619737 }) } catch (e) {}
         send.textContent = 'Sent'
       })
       .catch(function () {
